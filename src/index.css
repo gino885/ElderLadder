@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+header {
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+header .navbar-collapse {
+  font-size: 24px;
+}
+
+header .nav-link {
+  margin: 0 1rem;
+}
+
+header .navbar-expand-lg .navbar-nav {
+  margin: 0 auto;
+  align-items: center;
 }
