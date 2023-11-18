@@ -8,6 +8,7 @@ import {
 import PostsPage from './PostsPage';
 import CardsPage from './CardsPage';
 import Home from './HomePage';
+
 import headerImage from './images/AI_elder.png';
 
 function App() {
