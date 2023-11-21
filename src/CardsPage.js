@@ -1,31 +1,33 @@
 import React, { useState } from 'react';
 
-const LotteryPage = () => {
-  const [entry, setEntry] = useState('');
+function CardsPage() {
+  const [imageSrc, setImageSrc] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Entry submitted: ${entry}`);
-    // Add logic to handle the lottery entry
+  const fetchImage = () => {
+    fetch('http://localhost:8080/image')
+      .then(response => response.blob())
+      .then(blob => {
+        const imageUrl = URL.createObjectURL(blob);
+        setImageSrc(imageUrl);
+      })
+      .catch(error => {
+        console.error('Error fetching image:', error);
+      });
   };
 
   return (
     <div>
-      <h2>Lottery</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={entry}
-          onChange={(e) => setEntry(e.target.value)}
-          className="border border-gray-300 p-2"
-          placeholder="Enter your name"
-        />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-          Submit
-        </button>
-      </form>
+      <h2>Cards</h2>
+      <button 
+        type="submit" 
+        className="bg-blue-500 text-white px-4 py-2"
+        onClick={fetchImage}
+      >
+        Submit
+      </button>
+      {imageSrc && <img src={imageSrc} alt="Fetched from API" />}
     </div>
   );
-};
+}
 
-export default LotteryPage;
+export default CardsPage;
