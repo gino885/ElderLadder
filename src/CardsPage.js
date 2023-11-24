@@ -57,7 +57,7 @@ function CardsPage() {
   ];
 
   return (
-    <div className="h-screen">
+    <div className="h-screen" style={{ backgroundColor: '#f0f4f8' }}>
       <div className="float-left m-4">
         <h2 className="text-2xl font-bold mb-8">花 5 秒鐘讓我們更了解你</h2>
         {questions.map((q, qIndex) => (
@@ -86,11 +86,12 @@ function CardsPage() {
       <img src={loadingGif} alt="Loading..." className="w-1/2 m-4"/>
        </>
        ) : imageSrc ? (
-        <div className="flex flex-col items-center"> {/* Flex 容器 */}
+        //bg-gradient-to-r from-red-50 via-red-100 to-red-200 shadow-2xl rounded-xl p-4 border border-blue-300
+        <div className="flex flex-col items-center "> {/* Flex 容器 */}
         <a href={imageSrc} download="fetchedImage.jpg">
-          <img src={imageSrc} alt="Fetched content" className=" w-60 m-4 -mt-30 slide-in-from-bottom" />
+          <img src={imageSrc} alt="Fetched content" className=" w-60 m-4 -mt-30 slide-in-from-bottom hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105" />
         </a>
-        <p className='text-2xl font-bold mb-4 '>點擊卡片收下小挑戰</p>
+        <p className='text-2xl font-bold mb-4 text-center'>點擊卡片收下小挑戰</p>
         <img src={dolu} alt="抽卡失敗" className=" w-60 m-4" />
         </div>
         ) : null}

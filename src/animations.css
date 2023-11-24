@@ -12,3 +12,7 @@
   .slide-in-from-bottom {
     animation: slideInFromBottom 1s ease-out;
   }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
