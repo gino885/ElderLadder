@@ -1,0 +1,14 @@
+@keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%); /* 从下方开始 */
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0); /* 结束于原位 */
+      opacity: 1;
+    }
+  }
+  
+  .slide-in-from-bottom {
+    animation: slideInFromBottom 1s ease-out;
+  }

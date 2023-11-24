@@ -1,17 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import loadingGif from './images/loadingGif.gif';
+import dolu from './images/dolu.jpg';
+import './animations.css';
 
 function CardsPage() {
   const [imageSrc, setImageSrc] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadingText, setLoadingText] = useState('loading');
+
+  useEffect(() => {
+    let dotCount = 0;
+    const intervalId = setInterval(() => {
+      setLoadingText(`loading${'.'.repeat((dotCount % 4) + 3)}`); 
+      dotCount++;
+    }, 500);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const fetchImage = () => {
+    setIsLoading(true);
     fetch('http://localhost:8080/image')
       .then(response => response.blob())
       .then(blob => {
         const imageUrl = URL.createObjectURL(blob);
         setImageSrc(imageUrl);
+        setIsLoading(false);
       })
       .catch(error => {
         console.error('Error fetching image:', error);
+        setIsLoading(false);
       });
   };
 
@@ -30,7 +48,7 @@ function CardsPage() {
     },
     {
       question: "你有多愛資訊種子",
-      options: ["老愛老愛了", "山無稜 天地合", "除了準備TUV的半夜都很愛", "愛不是用說的", "痾...建議直接連絡[]"]
+      options: ["老愛老愛了", "山無稜 天地合", "除了準備TUV的半夜都很愛", "愛不是用說的", "痾...請學員部把你帶走"]
     },
     {
       question: "第五組是個好團隊嗎",
@@ -41,9 +59,9 @@ function CardsPage() {
   return (
     <div className="h-screen">
       <div className="float-left m-4">
-        <h2 className="text-2xl font-bold mb-4">描述一下你跟家中長輩的關係</h2>
+        <h2 className="text-2xl font-bold mb-8">花 5 秒鐘讓我們更了解你</h2>
         {questions.map((q, qIndex) => (
-          <div key={qIndex} className="mb-4">
+          <div key={qIndex} className=" mb-10">
             <span className="font-semibold">{q.question}</span>
             {q.options.map((option, oIndex) => (
               <label key={oIndex} className="inline-flex items-center ml-2">
@@ -53,23 +71,30 @@ function CardsPage() {
             ))}
           </div>
         ))}
-        <button 
-          type="submit" 
-          className="bg-blue-500 text-white px-4 py-2"
-          onClick={fetchImage}
+       <button 
+         type="submit" 
+         className="bg-gradient-to-r from-blue-400 to-blue-800 text-white px-4 py-2 rounded shadow-lg hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300"
+         onClick={fetchImage}
         >
-          生成你的客製化任務卡
-        </button>
+         生成你的客製化任務卡
+      </button>   
       </div>
       <div className="flex justify-center items-center h-full">
-        {imageSrc && 
-          <img 
-            src={imageSrc} 
-            alt="Fetched from API" 
-            className="w-1/3 m-4"
-          />
-        }
-      </div>
+      {isLoading ? (
+      <>
+      <span className="text-2xl font-bold mb-2">{loadingText}</span>
+      <img src={loadingGif} alt="Loading..." className="w-1/2 m-4"/>
+       </>
+       ) : imageSrc ? (
+        <div className="flex flex-col items-center"> {/* Flex 容器 */}
+        <a href={imageSrc} download="fetchedImage.jpg">
+          <img src={imageSrc} alt="Fetched content" className=" w-60 m-4 -mt-30 slide-in-from-bottom" />
+        </a>
+        <p className='text-2xl font-bold mb-4 '>點擊卡片收下小挑戰</p>
+        <img src={dolu} alt="抽卡失敗" className=" w-60 m-4" />
+        </div>
+        ) : null}
+        </div>
     </div>
   );
 }
