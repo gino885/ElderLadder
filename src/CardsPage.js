@@ -87,7 +87,8 @@ function CardsPage() {
        </>
        ) : imageSrc ? (
         //bg-gradient-to-r from-red-50 via-red-100 to-red-200 shadow-2xl rounded-xl p-4 border border-blue-300
-        <div className="flex flex-col items-center "> {/* Flex 容器 */}
+        //
+        <div className="bg-gradient-to-r from-red-50 via-red-100 to-red-200 shadow-2xl rounded-xl p-4 border border-blue-300 "> {/* Flex 容器 */}
         <a href={imageSrc} download="fetchedImage.jpg">
           <img src={imageSrc} alt="Fetched content" className=" w-60 m-4 -mt-30 slide-in-from-bottom hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105" />
         </a>

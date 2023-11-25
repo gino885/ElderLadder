@@ -48,7 +48,7 @@ function PostsPage() {
   return (
     
     <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
-  <div className="w-1/2 grid grid-cols-1 grid-rows-7 gap-5 p-4 mx-auto" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)' }}>
+  <div className="w-1/2 grid grid-cols-1 grid-rows-7 gap-5 p-4 mx-auto" style={{  borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)' }}>
     <div className="flex items-center justify-between my-4">
     <div className="w-40 h-20 invisible"> {/* 透明的佔位元素，與圖標大小相同 */}
     </div>
@@ -60,7 +60,7 @@ function PostsPage() {
     {posts.map((post, index) => (
       <div key={index} className="flex flex-col gap-2 border border-gray-300 p-4 rounded hover:bg-blue-100 hover:shadow-xl transition ease-in-out duration-300" style={{ animation: 'fadeIn 0.5s' }}>
         <h2 className="font-bold text-3xl mb-3 text-teal-400 hover:text-blue-800">{post.title}</h2>
-        <p className=" font-bold text-xl text-slate-950 mb-4 text-shadow">{post.description}</p>
+        <p className=" font-bold text-xl text-slate-950 mb-4 ">{post.description}</p>
         <div>
           {post.image && <img src={post.image} alt="Post" className="w-full h-auto rounded transition-transform duration-300 hover:scale-105" />}
           {post.video && <video src={post.video} controls className="w-full rounded transition-transform duration-300 hover:scale-105" />}

@@ -1,6 +1,7 @@
 import React from 'react';
 import backgroundimg from './images/ladder2.png'; 
 import cloud from './images/cloud.jpg';
+import './App.css';
 function Home() {
   return (
     <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
@@ -13,7 +14,7 @@ function Home() {
       }}
     >
        <div className="text-center py-4" style={{cloud: `url(${cloud})`, backgroundSize: 'cover'}}>
-          <h2 className="text-3xl font-extrabold text-gray-900 inline-block bg-white bg-opacity-50 px-4">
+          <h2 className="text-3xl font-extrabold text-gray-900 inline-block bg-white bg-opacity-50 px-4 text-shadow">
             ElderLadder - the ladder leads you to the elder
           </h2>
         </div>
