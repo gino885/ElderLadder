@@ -20,7 +20,7 @@ function CardsPage() {
 
   const fetchImage = () => {
     setIsLoading(true);
-    fetch('http://localhost:8080/image')
+    fetch('https://elderLadder.ap-southeast-2.elasticbeanstalk.com/image')
       .then(response => response.blob())
       .then(blob => {
         const imageUrl = URL.createObjectURL(blob);
