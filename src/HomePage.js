@@ -1,8 +1,8 @@
 import React from 'react';
-import backgroundimg from './images/ladder2.png'; 
-import cloud from './images/cloud.jpg';
 import './App.css';
 function Home() {
+  const backgroundimg = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/ladder2.png";
+  const cloud = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/cloud.jpg";
   return (
     <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
    

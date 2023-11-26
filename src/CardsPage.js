@@ -1,9 +1,9 @@
 import React, { useState,useEffect } from 'react';
-import loadingGif from './images/loadingGif.gif';
-import dolu from './images/dolu.jpg';
 import './animations.css';
 
 function CardsPage() {
+  const loadingGif = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/loadingGif.gif";
+  const dolu = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/dolu.jpg";
   const [imageSrc, setImageSrc] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingText, setLoadingText] = useState('loading');

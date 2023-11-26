@@ -1,16 +1,16 @@
 import React from 'react';
-import backgroundImage from './images/ladder1.png'; 
-//import v1 from './videos/5-7v.mp4';
 import './animations.css';
-import googleForm from './images/googleForm.png';
 import './App.css';
 
 function PostsPage() {
+  const v1 = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/videos/5-7v.mp4";
+  const backgroundImage = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/ladder1.png";
+  const googleForm = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/googleForm.png";
   const posts = [
     {
       title: '5-7許雁婷',
       description: '與爺爺奶奶彰化生活',
-      //video: v1, // 影片路徑
+      video: v1, // 影片路徑
     },
     {
       title: '貼文標題 2',
