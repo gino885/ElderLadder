@@ -4,7 +4,6 @@ import './App.css';
 
 function PostsPage() {
   const v1 = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/videos/5-7v.mp4";
-  const backgroundImage = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/ladder1.png";
   const googleForm = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/googleForm.png";
   const posts = [
     {
@@ -47,14 +46,18 @@ function PostsPage() {
   
   return (
     
-    <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
+    <div style={{ backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
   <div className="w-1/2 grid grid-cols-1 grid-rows-7 gap-5 p-4 mx-auto" style={{  borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)' }}>
     <div className="flex items-center justify-between my-4">
     <div className="w-40 h-20 invisible"> {/* 透明的佔位元素，與圖標大小相同 */}
     </div>
-     <h2 className=" text-4xl font-bold text-white text-shadow">Posts</h2>
+    <h2 className=" text-6xl font-bold text-slate-50 text-shadow-lg" 
+    style={{ textShadow: '4px 4px 4px rgba(0, 0, 1, 0.5)' }}>
+    Posts
+    </h2>
      <a href="https://docs.google.com/forms/d/e/1FAIpQLSekCkEwOXJt32iBUyAYhmC3Rg__daP1vZS99_9vMaHjrxXRvw/viewform?pli=1" target="_blank" rel="noopener noreferrer" className="mr-20 w-20 h-20 hover:scale-110 hover:bg-blue-500 hover:shadow-lg transition transform duration-300 ease-in-out rounded-full">
     <img src={googleForm} alt="More" className="w-full h-full" />
+    <p className="text-xl font-bold text-slate-900 text-shadow">後測問卷 </p>
      </a>
   </div>
     {posts.map((post, index) => (
