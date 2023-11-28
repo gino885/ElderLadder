@@ -8,7 +8,9 @@ function CardsPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingText, setLoadingText] = useState('loading');
 
+  
   useEffect(() => {
+
     let dotCount = 0;
     const intervalId = setInterval(() => {
       setLoadingText(`loading${'.'.repeat((dotCount % 4) + 3)}`); 
@@ -20,7 +22,13 @@ function CardsPage() {
 
   const fetchImage = () => {
     setIsLoading(true);
-    fetch('https://api.elderladder.live/image')
+    fetch('https://api.elderladder.live/image', {
+      method: 'GET',
+      mode: 'cors', // 确保 mode 设置为 'cors'
+      headers: {
+     'Content-Type': 'application/json',
+      }
+      })
       .then(response => response.blob())
       .then(blob => {
         const imageUrl = URL.createObjectURL(blob);
