@@ -13,14 +13,14 @@ function CardsPage() {
     const intervalId = setInterval(() => {
       setLoadingText(`loading${'.'.repeat((dotCount % 4) + 3)}`); 
       dotCount++;
-    }, 500);
+    }, 2000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   const fetchImage = () => {
     setIsLoading(true);
-    fetch('http://localhost:8080/image')
+    fetch('https://api.elderladder.live/image')
       .then(response => response.blob())
       .then(blob => {
         const imageUrl = URL.createObjectURL(blob);
