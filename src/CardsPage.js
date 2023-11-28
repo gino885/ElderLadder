@@ -20,7 +20,7 @@ function CardsPage() {
 
   const fetchImage = () => {
     setIsLoading(true);
-    fetch('https://api.elderladder.live/image')
+    fetch('http://localhost:8080/image')
       .then(response => response.blob())
       .then(blob => {
         const imageUrl = URL.createObjectURL(blob);
