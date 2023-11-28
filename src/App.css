@@ -42,3 +42,72 @@
 .custom-font {
   font-family: 'Roboto Mono', monospace;
 }
+.additional-text {
+  display: none;
+}
+.responsive-text {
+  font-size: 2.25rem; 
+  line-height: 2.25rem;/* 或您选择的默认大小 */
+}
+.responsive-text2{
+  font-size: 1.875rem;
+  line-height: 2.25rem; /* 或您选择的默认大小 */
+}
+.responsive-text3{
+  font-size: 1.875rem;
+  line-height: 2.25rem; /* 或您选择的默认大小 */
+}
+.responsive-invisivle{
+  width: 15rem;
+  height: 2rem;
+}
+
+/* 当屏幕宽度小于或等于 600px 时 */
+@media (max-width: 600px) {
+  .responsive-invisivle{
+    width: 15rem;
+    height: 2rem;
+  }
+  /* 隐藏图片 */
+  .responsive-image {
+    display: none;
+  }
+  .responsive-text {
+    font-size: 2rem;
+    line-height: 2rem; /* 或您选择的默认大小 */
+  }
+  .responsive-text2 {
+    font-size: 1.5rem;
+    line-height: 2rem; /* 或您选择的默认大小 */
+  }
+  .responsive-text2{
+    font-size: 1.5rem;
+    line-height: 1.85rem;
+     /* 或您选择的默认大小 */
+  }
+
+  /* 显示文字 */
+  .additional-text {
+    display: block;
+  }
+
+  /* 如果需要对 grid 布局做调整 */
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1025px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
