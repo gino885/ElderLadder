@@ -79,6 +79,7 @@ function CardsPage() {
             ))}
           </div>
         ))}
+       <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
        <button 
          type="submit" 
          className="bg-gradient-to-r from-blue-400 to-blue-800 text-white px-4 py-2 rounded shadow-lg hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300"
@@ -105,6 +106,7 @@ function CardsPage() {
         </div>
         ) : null}
         </div>
+    </div>
     </div>
   );
 }

@@ -50,8 +50,8 @@
   line-height: 2.25rem;/* 或您选择的默认大小 */
 }
 .responsive-text2{
-  font-size: 1.875rem;
-  line-height: 2.25rem; /* 或您选择的默认大小 */
+  font-size: 1.5rem;
+  line-height: 1.5rem; /* 或您选择的默认大小 */
 }
 .responsive-text3{
   font-size: 1.875rem;
@@ -61,6 +61,30 @@
   width: 15rem;
   height: 2rem;
 }
+.responsive-border{
+  width: 60rem;
+}
+.homeGrid{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 1032px) {
+  .responsive-image {
+    display: none;
+  }
+  .loadingImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .homeGrid{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .additional-text {
+    display: block;
+  }
+}
 
 /* 当屏幕宽度小于或等于 600px 时 */
 @media (max-width: 600px) {
@@ -69,9 +93,7 @@
     height: 2rem;
   }
   /* 隐藏图片 */
-  .responsive-image {
-    display: none;
-  }
+  
   .responsive-text {
     font-size: 2rem;
     line-height: 2rem; /* 或您选择的默认大小 */
@@ -85,11 +107,11 @@
     line-height: 1.85rem;
      /* 或您选择的默认大小 */
   }
+  .responsive-border{
+    width: auto;
+  }
 
   /* 显示文字 */
-  .additional-text {
-    display: block;
-  }
 
   /* 如果需要对 grid 布局做调整 */
   .grid-cols-3 {

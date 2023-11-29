@@ -63,7 +63,7 @@ function Home() {
       <p className="responsive-text2 mt-8 text-3xl text-white custom-font font-semibold">親近家中長者 領取免費辛巴克</p>
       </div>
 
-      <div className="grid grid-cols-3  justify-items-center mt-3">
+      <div className="grid homeGrid justify-items-center mt-3">
       <div className="group relative m-1 flex flex-col items-center justify-center w-full">
       <a href={"https://docs.google.com/forms/d/e/1FAIpQLSekCkEwOXJt32iBUyAYhmC3Rg__daP1vZS99_9vMaHjrxXRvw/viewform?pli=1"} target="_blank" rel="noopener noreferrer">
       <img src={"https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/googleForm.png"} alt="" className="w-60 h-60 object-cover rounded-lg transition duration-300 ease-in-out group-hover:scale-125" />
@@ -74,7 +74,7 @@ function Home() {
       </div>
        </div>
         <div className="flex items-center justify-center w-full">
-          <img class="responsive-image" src="https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/arrow.png" alt="Arrow" className=" h-3/5" /> {/* Arrow image */}
+          <img src="https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/arrow.png" alt="Arrow" className=" h-3/5 responsive-image" /> {/* Arrow image */}
         </div>
         <div className="group relative m-1 flex flex-col items-center justify-center w-full onClick={handleClick}">
         <ImageBoxWithNavigation imageUrl="https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/video.jpg" navigateTo="/posts"  />
@@ -91,6 +91,9 @@ function Home() {
        </div>
        <p className="mt-8 text-2xl text-white custom-font font-semibold">與長輩展開對話的第一步</p>
        </div>
+       <div className="flex items-center justify-center w-full">
+          <img  src="https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/arrow.png" alt="Arrow" className=" h-3/5 responsive-image" /> {/* Arrow image */}
+        </div>
        <div className="group relative m-1 flex flex-col items-center justify-center w-full">
        <a href={"https://docs.google.com/forms/d/10jcR4gD4YF0sxWiEi2FU-gq_qCGR5oBDtILhHauneX4/edit"} target="_blank" rel="noopener noreferrer">
       <img src={"https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/form.png"} alt="" className="w-60 h-60 object-cover rounded-lg transition duration-300 ease-in-out group-hover:scale-125" />

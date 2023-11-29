@@ -47,7 +47,7 @@ function PostsPage() {
   return (
     
     <div style={{ backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
-  <div className=" w-auto grid grid-cols-1 grid-rows-7 gap-5 p-4 mx-auto" style={{  borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)' }}>
+  <div className=" responsive-border grid grid-cols-1 grid-rows-7 gap-5 p-4 mx-auto" style={{  borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)' }}>
     <div className="flex items-center justify-between my-4">
     <div className=" responsive-invisivle h-20 invisible"> {/* 透明的佔位元素，與圖標大小相同 */}
     </div>
@@ -55,12 +55,11 @@ function PostsPage() {
     style={{ textShadow: '4px 4px 4px rgba(0, 0, 1, 0.5)' }}>
     Posts
     </h2>
-    <div className='ml-10'>
-     <a href="https://docs.google.com/forms/d/e/1FAIpQLSekCkEwOXJt32iBUyAYhmC3Rg__daP1vZS99_9vMaHjrxXRvw/viewform?pli=1" target="_blank" rel="noopener noreferrer" className="mr-20 w-20 h-20 hover:scale-110 hover:bg-blue-500 hover:shadow-lg transition transform duration-300 ease-in-out rounded-full">
-    <img src={googleForm} alt="More" className=" mt-14 w-3/6 h-auto " />
-    <p className="responsive-text2 font-bold text-slate-900 mt-4  text-shadow">後測問卷 </p>
+     <a href="https://docs.google.com/forms/d/e/1FAIpQLSekCkEwOXJt32iBUyAYhmC3Rg__daP1vZS99_9vMaHjrxXRvw/viewform?pli=1" target="_blank" rel="noopener noreferrer">
+    <img src={googleForm} alt="More" className=" ml-10 mr-20 w-20 h-25 hover:scale-110 hover:bg-purple-500 hover:shadow-lg transition transform duration-300 ease-in-out"/>
+    <p className="responsive-text2 ml-8 mt-3  font-bold text-slate-900  text-shadow">後測問卷 </p>
      </a>
-    </div>
+  
   </div>
     {posts.map((post, index) => (
       <div key={index} className="flex flex-col gap-2 border border-gray-300 p-4 rounded hover:bg-blue-100 hover:shadow-xl transition ease-in-out duration-300" style={{ animation: 'fadeIn 0.5s' }}>
