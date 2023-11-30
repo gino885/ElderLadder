@@ -109,7 +109,7 @@ function Home() {
         <h2 className="text-2xl font-semibold text-white custom-font">About</h2>
        
       </div>
-      <p className="mt-4 text-2xl text-white text-center  ">This website is the Ladder leads you the elder</p>
+      <p className="mt-4 text-2xl text-white text-center  ">This website acts as a ladder, connecting you with the elders</p>
     </div>
     
   );

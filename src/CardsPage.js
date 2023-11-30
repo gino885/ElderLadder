@@ -41,27 +41,76 @@ function CardsPage() {
       });
   };
 
+  const [gender, setGender] = useState('');
+  const [taskDifficulty, setTaskDifficulty] = useState('');
+
+  const handleOptionChange = (questionIndex, event) => {
+    const value = event.target.value;
+    if (questionIndex === 0) { // 假設性別問題是第一個問題
+      setGender(value);
+    } else if (questionIndex === 4) { // 假設任務卡難度問題是第五個問題
+      setTaskDifficulty(value);
+    }
+  };
+
+  const onClick2 = () => {
+    fetchImage();
+    handleSubmit(); // 替换成你的另一个函数
+  };
+  const handleSubmit = async () => {
+    // 創建只包含這兩個問題答案的數據對象
+    const dataToSend = {
+      gender: gender,
+      taskDifficulty: taskDifficulty
+    };
+
+    // 使用fetch發送數據
+    try {
+      const response = await fetch('http://localhost:8080/cards', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend)
+      });
+
+      if (!response.ok) {
+        throw new Error('Something went wrong');
+      }
+
+      const responseData = await response.json();
+      console.log(responseData);
+    } catch (error) {
+      console.error('Failed to submit survey:', error);
+    }
+  }
+  
+
+
+
+
+
   const questions = [
+    {
+      question: "你的性別是什麼",
+      options: ["生理男", "生理女", "雙棲性別", "我是百bang怪", "唉呦你幹嘛問那麼敏感的問題"]
+    },
     {
       question: "你常常與家中長輩相處嗎",
       options: ["非常", "很常", "還好", "不常", "完全沒有"]
     },
     {
       question: "你愛你的家中長輩嗎",
-      options: ["非常愛", "很愛", "還好捏", "不愛", "痾..."]
-    },
-    {
-      question: "你是酷 guy 嗎",
-      options: ["老酷了", "[酷guy不說話]", "不好說", "害羞", "應該不是但我們相信你是"]
+      options: ["非常愛", "很愛", "還好捏", "是沒到那麼愛啦", "痾..."]
     },
     {
       question: "你有多愛資訊種子",
-      options: ["老愛老愛了", "山無稜 天地合", "除了準備TUV的半夜都很愛", "愛不是用說的", "痾...請學員部把你帶走"]
+      options: ["老愛老愛了", "山無稜 天地合", "除了每個熬夜做專案朝地中海發展的夜晚都很愛", "愛不是用說的", "強制愛也是愛"]
     },
     {
-      question: "第五組是個好團隊嗎",
-      options: ["不只是", "肯定是", "是", "基本上是", "痾...請你離開"]
-    },
+      question: "你希望的任務卡難度？",
+      options: ["簡單", "普通", "困難"]
+    },  
   ];
 
   return (
@@ -73,7 +122,12 @@ function CardsPage() {
             <span className="font-semibold">{q.question}</span>
             {q.options.map((option, oIndex) => (
               <label key={oIndex} className="inline-flex items-center ml-2">
-                <input type="radio" name={`question-${qIndex}`} />
+                 <input 
+                  type="radio" 
+                  name={`question-${qIndex}`} 
+                  value={option}
+                  onChange={(e) => handleOptionChange(qIndex, e)} 
+                />
                 <span className="ml-1">{option}</span>
               </label>
             ))}
@@ -83,7 +137,7 @@ function CardsPage() {
        <button 
          type="submit" 
          className="bg-gradient-to-r from-blue-400 to-blue-800 text-white px-4 py-2 rounded shadow-lg hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300"
-         onClick={fetchImage}
+         onClick={onClick2}
         >
          生成你的客製化任務卡
       </button>   
@@ -110,5 +164,6 @@ function CardsPage() {
     </div>
   );
 }
+
 
 export default CardsPage;
