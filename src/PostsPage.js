@@ -57,7 +57,7 @@ function PostsPage() {
     </h2>
      <a href="https://docs.google.com/forms/d/e/1FAIpQLSekCkEwOXJt32iBUyAYhmC3Rg__daP1vZS99_9vMaHjrxXRvw/viewform?pli=1" target="_blank" rel="noopener noreferrer">
     <img src={googleForm} alt="More" className=" ml-10 mr-20 w-20 h-25 hover:scale-110 hover:bg-purple-500 hover:shadow-lg transition transform duration-300 ease-in-out"/>
-    <p className="responsive-text2 ml-8 mt-3  font-bold text-slate-900  text-shadow">後測問卷 </p>
+    <p className=" responsive-formText ml-8 mt-3  font-bold text-slate-900  text-shadow">後測問卷 </p>
      </a>
   
   </div>

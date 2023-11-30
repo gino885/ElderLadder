@@ -66,7 +66,7 @@ function CardsPage() {
 
     // 使用fetch發送數據
     try {
-      const response = await fetch('http://localhost:8080/cards', {
+      const response = await fetch('https://api.elderladder.live/cards', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ function CardsPage() {
             ))}
           </div>
         ))}
-       <div className="flex flex-col md:flex-row items-center mt-4 md:mt-0">
+       <div className="flex items-center mt-4 md:mt-0">
        <button 
          type="submit" 
          className="bg-gradient-to-r from-blue-400 to-blue-800 text-white px-4 py-2 rounded shadow-lg hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300"
@@ -142,11 +142,11 @@ function CardsPage() {
          生成你的客製化任務卡
       </button>   
       </div>
-      <div className="flex justify-center items-center h-full">
+      <div className="flex float-right h-full">
       {isLoading ? (
       <>
-      <span className="text-2xl font-bold mb-2">{loadingText}</span>
-      <img src={loadingGif} alt="Loading..." className="w-1/2 m-4"/>
+      <span className="text-2xl font-bold mb-2 ">{loadingText}</span>
+      <img src={loadingGif} alt="Loading..." className=" w-60  m-4"/>
        </>
        ) : imageSrc ? (
         //bg-gradient-to-r from-red-50 via-red-100 to-red-200 shadow-2xl rounded-xl p-4 border border-blue-300

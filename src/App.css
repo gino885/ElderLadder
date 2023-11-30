@@ -67,6 +67,10 @@
 .homeGrid{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.responsive-formText {
+  font-size: 1.5rem;
+  line-height: 2rem; /* 或您选择的默认大小 */
+}
 
 @media (max-width: 1032px) {
   .responsive-image {
@@ -98,8 +102,8 @@
     font-size: 2rem;
     line-height: 2rem; /* 或您选择的默认大小 */
   }
-  .responsive-text2 {
-    font-size: 1.5rem;
+  .responsive-formText {
+    font-size: 1.3rem;
     line-height: 2rem; /* 或您选择的默认大小 */
   }
   .responsive-text2{
