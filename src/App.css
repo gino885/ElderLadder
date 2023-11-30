@@ -73,6 +73,9 @@
 }
 
 @media (max-width: 1032px) {
+  .resposive-loading{
+    float: left;
+  }
   .responsive-image {
     display: none;
   }

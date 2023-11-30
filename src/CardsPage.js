@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import './animations.css';
+import './App.css';
 
 function CardsPage() {
   const loadingGif = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/loadingGif.gif";
@@ -58,7 +59,7 @@ function CardsPage() {
     handleSubmit(); // 替换成你的另一个函数
   };
   const handleSubmit = async () => {
-    // 創建只包含這兩個問題答案的數據對象
+    
     const dataToSend = {
       gender: gender,
       taskDifficulty: taskDifficulty
@@ -77,9 +78,7 @@ function CardsPage() {
       if (!response.ok) {
         throw new Error('Something went wrong');
       }
-
-      const responseData = await response.json();
-      console.log(responseData);
+      
     } catch (error) {
       console.error('Failed to submit survey:', error);
     }
@@ -142,11 +141,12 @@ function CardsPage() {
          生成你的客製化任務卡
       </button>   
       </div>
-      <div className="flex float-right h-full">
+      </div>
+      <div className="flex resposive-loading flex-col justify-center items-center h-full">
       {isLoading ? (
       <>
       <span className="text-2xl font-bold mb-2 ">{loadingText}</span>
-      <img src={loadingGif} alt="Loading..." className=" w-60  m-4"/>
+      <img src={loadingGif} alt="Loading..." className=" w-3/6  m-4"/>
        </>
        ) : imageSrc ? (
         //bg-gradient-to-r from-red-50 via-red-100 to-red-200 shadow-2xl rounded-xl p-4 border border-blue-300
@@ -160,7 +160,6 @@ function CardsPage() {
         </div>
         ) : null}
         </div>
-    </div>
     </div>
   );
 }
