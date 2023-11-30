@@ -1,6 +1,7 @@
 import React from 'react';
 import './animations.css';
 import './App.css';
+import autoprefixer from 'autoprefixer';
 
 function PostsPage() {
   const v1 = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/videos/5-7v.mp4";
@@ -12,9 +13,11 @@ function PostsPage() {
       video: v1, // 影片路徑
     },
     {
-      title: '貼文標題 2',
-      description: '這是第二篇貼文的描述。',
-      image: 'path/to/image2.jpg', 
+      title: '青銀下半場 — 陪伴是最長情的告白 - 陳柏駿',
+      description: '記得小時候，阿嬤是我的超級英雄，無論是做最好吃的點心、帶我上下學，還是給予無微不至的關懷。現在，轉眼間，我們長大了，這段關係走到了下半場，阿嬤的記憶逐漸模糊，甚至有時會認不得眼前站著的那位，是他的孫子，但正是這個時候，超人下崗了，換成青輩的我們要好好陪伴他們，用愛續寫我們的故事，用最純真的心，最耐心的陪伴，證明愛是不會隨著時間流逝而消失的。'
+      +'或許我們不能成為他們的超人，但，或許，他們也不希望我們如此，辛苦撐起幾十年的保護傘正是希望底下愛護的人不需這般辛勞，在他們眼裡，我們不需要頂天立地，只需要好好地陪伴在他們身邊' +"— 陪伴，就是最長情的告白。"
+      ,
+      video: 'https://www.youtube.com/watch?v=-Wi5va176rk', 
     },
     {
       title: '貼文標題 3',
@@ -67,13 +70,30 @@ function PostsPage() {
         <p className=" font-bold text-xl text-slate-950 mb-4 ">{post.description}</p>
         <div>
           {post.image && <img src={post.image} alt="Post" className="w-full h-auto rounded transition-transform duration-300 hover:scale-105" />}
-          {post.video && <video src={post.video} controls className="w-full rounded transition-transform duration-300 hover:scale-105" />}
-        </div>
+          {post.video && (
+      <div>
+        {post.video.includes("youtube") ? (
+          <iframe
+            width="900"
+            height="500"
+            src={`https://www.youtube.com/embed/${post.video.split('v=')[1]}`}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        ) : (
+          <video src={post.video} controls className="w-full rounded transition-transform duration-300 hover:scale-105" />
+        )}
+      
       </div>
+      )}
+       </div>
+       </div>
     ))}
-  </div>
-</div>
+ 
 
+</div>
+</div>
 
   );
   
