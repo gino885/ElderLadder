@@ -2,6 +2,18 @@ import React, { useState,useEffect } from 'react';
 import './animations.css';
 import './App.css';
 
+function Modal({ open, onClose, children }) {
+  if (!open) return null;
+
+  return (
+    <div className="modal-backdrop">
+      <div className="modal text-xl ml-5 ">
+        {children}
+      </div>
+    </div>
+  );
+}
+
 function CardsPage() {
   const loadingGif = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/loadingGif.gif";
   const dolu = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/dolu.jpg";
@@ -52,13 +64,23 @@ function CardsPage() {
     } else if (questionIndex === 4) { // 假設任務卡難度問題是第五個問題
       setTaskDifficulty(value);
     }
+    
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState('');
 
   const onClick2 = () => {
     fetchImage();
     handleSubmit(); // 替换成你的另一个函数
   };
   const handleSubmit = async () => {
+    if (!gender || !taskDifficulty) {
+      setModalContent('请完成所有選項！');
+      setIsModalOpen(true);
+      return;
+    }
+    setIsModalOpen(false);
     
     const dataToSend = {
       gender: gender,
@@ -82,6 +104,7 @@ function CardsPage() {
     } catch (error) {
       console.error('Failed to submit survey:', error);
     }
+   
   }
   
 
@@ -139,7 +162,12 @@ function CardsPage() {
          onClick={onClick2}
         >
          生成你的客製化任務卡
-      </button>   
+      </button>  
+      {isModalOpen && (
+        <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
+          <p className=' text-red-600 font-semibold text-lg'>{modalContent}</p>
+        </Modal>
+      )} 
       </div>
       </div>
       <div className="flex resposive-loading flex-col justify-center items-center h-full">
