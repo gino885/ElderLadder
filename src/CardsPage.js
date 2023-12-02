@@ -71,15 +71,16 @@ function CardsPage() {
   const [modalContent, setModalContent] = useState('');
 
   const onClick2 = () => {
+    if (!gender || !taskDifficulty) {
+      setModalContent('請完成所有選項！');
+      setIsModalOpen(true);
+      return;
+    }
     fetchImage();
     handleSubmit(); // 替换成你的另一个函数
   };
   const handleSubmit = async () => {
-    if (!gender || !taskDifficulty) {
-      setModalContent('请完成所有選項！');
-      setIsModalOpen(true);
-      return;
-    }
+   
     setIsModalOpen(false);
     
     const dataToSend = {
