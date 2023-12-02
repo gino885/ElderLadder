@@ -62,7 +62,9 @@
   height: 2rem;
 }
 .responsive-border{
-  width: 60rem;
+  width: 60%;
+  margin: auto;
+  align-items: center;
 }
 .homeGrid{
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -72,7 +74,15 @@
   line-height: 2rem; /* 或您选择的默认大小 */
 }
 
+
+
 @media (max-width: 1032px) {
+
+  .responsive-border{
+    width: 90%;
+    margin: auto;
+   
+ }
   .resposive-loading{
     float: left;
   }
@@ -114,10 +124,7 @@
     line-height: 1.85rem;
      /* 或您选择的默认大小 */
   }
-  .responsive-border{
-    width: auto;
-  }
-
+ 
   /* 显示文字 */
 
   /* 如果需要对 grid 布局做调整 */
@@ -138,5 +145,18 @@
 img, video {
   max-width: 100%;
   height: auto;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9的比例 */
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 

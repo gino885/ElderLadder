@@ -1,14 +1,16 @@
 import React, { useState,useEffect } from 'react';
 import './animations.css';
 import './App.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 
-const v1 = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/videos/5-7v.mp4";
 const googleForm = "https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/googleForm.png";
 const posts = [
   {
-    title: '5-7許雁婷',
-    description: '與爺爺奶奶彰化生活',
-    video: v1, // 影片路徑
+    title: '我與銀髮的互動_料理篇 - 許雁婷',
+    description: '印象中許多童年美好的回憶都是在外公外婆家渡過的。 但是，長大後的呢？ 一直追逐著升學的目標，國中考高中，高中考大學，不知不覺我20歲了，是時候該更新幸福回憶的庫存了！ 外公外婆家有田有山有一身絕學本領，那就是製作米食點心的專家！舉凡紅龜粿、芋粿、蘿蔔糕、菜頭粿通通包在他們身上！ 由於我喜歡吃，再加上外公外婆時常製作這些美味點心，所以發想了此Prototype 讓我與他們能夠有更多互動，創造更多美好的回憶。',
+    video: 'https://www.youtube.com/watch?v=R10wNqi9Bb0', 
   },
   {
     title: '青銀下半場 — 陪伴是最長情的告白 - 陳柏駿',
@@ -20,12 +22,24 @@ const posts = [
   {
     title: '奶奶與我_透過傳承延續兒時記憶 - 盧易駿',
     description: '藉由這個寶貴的機會來和長輩學習技藝，在練習的過程中逐漸也與小時候的記憶有所串聯。孩提時候的我是與奶奶一起生活的，因此與奶奶很親。不過之後搬回去和父母住之後就變成只有定期會去探望奶奶而已，不復以往的親密，聊天的內容也只剩茶餘飯後的一般閒聊。但在和奶奶一起削竹筍的過程中，我們彷彿又回到了從前一樣，有更多互動，無形之中又拉近了彼此的距離。只不過奶奶年紀變大了，我也不是當初那個懵懂無知的小孩了，讓我感到光陰似箭歲月如梭，也決定以後要更加把握與奶奶相處的時光。',
-    video: 'https://www.youtube.com/watch?v=LYzHlO0Pbi8', 
+    video: 'https://www.youtube.com/watch?v=AeFlFYhyL_I', 
   },
   {
-    title: '貼文標題 4ˋ',
-    description: '這是第四篇貼文的描述。',
-    image: 'path/to/image2.jpg',
+    title: '手做從前—我們的技藝 - 魏妤庭',
+    description: '我的外婆曾經經營麵店很長一段時間，直到現在我吃到外面的餛飩麵還是不大習慣，對外婆好吃又經濟實惠的餛飩麵念念不忘。但外婆漸漸老了，站不動了。我也就很久沒吃過外婆做的餛飩麵了。或許這是在提醒我，現在該是換我動手做東西給我們吃啦!藉由此次活動，我決定向外婆學習包餛飩的技藝，加以傳承，並與大家分享我從中得到的快樂。',
+    images: ['https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/1.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/2.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/3.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/4.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/5.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/6.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/7.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/8.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/9.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/10.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/11.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/12.png',
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/13.png'],
   },
   {
     title: '貼文標題 5',
@@ -45,8 +59,39 @@ const posts = [
   },
 ];
 
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red", fontSize: "30px" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green", fontSize: "30px" }}
+      onClick={onClick}
+    />
+  );
+}
 
 function PostsPage() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+   prevArrow: <SamplePrevArrow />
+  };
+
 
   const [randomPosts, setRandomPosts] = useState([]);
 useEffect(() => {
@@ -57,8 +102,8 @@ useEffect(() => {
   
   return (
     
-    <div style={{ backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
-  <div className=" responsive-border grid grid-cols-1 grid-rows-7 gap-5 p-4 mx-auto" style={{  borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)' }}>
+    <div className=' responsive-border' style={{ backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
+  <div className=" grid grid-cols-1 grid-rows-7 gap-5 p-4 mx-auto" style={{  borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)' }}>
     <div className="flex items-center justify-between my-4">
     <div className=" responsive-invisivle h-20 invisible"> {/* 透明的佔位元素，與圖標大小相同 */}
     </div>
@@ -77,12 +122,21 @@ useEffect(() => {
         <h2 className="font-bold text-3xl mb-3 text-teal-400 hover:text-blue-800">{post.title}</h2>
         <p className=" font-bold text-xl text-slate-950 mb-4 ">{post.description}</p>
         <div>
-          {post.image && <img src={post.image} alt="Post" className="w-full h-auto rounded transition-transform duration-300 hover:scale-105" />}
-          {post.video && (
+        {post.images && Array.isArray(post.images) && (
+        <Slider {...settings}>
+        {post.images.map((image, index) => (
+        <div key={index}>
+        <img src={image} alt={`Post ${index}`} className=" w-auto h-auto rounded" />
+        </div>
+         ))}
+  </Slider>
+           )}
+           {post.video && (
       <div>
+         <div className="video-container">
         {post.video.includes("youtube") ? (
           <iframe
-            width="900"
+            width="600"
             height="500"
             src={`https://www.youtube.com/embed/${post.video.split('v=')[1]}`}
             title="YouTube video player"
@@ -92,7 +146,7 @@ useEffect(() => {
         ) : (
           <video src={post.video} controls className="w-full rounded transition-transform duration-300 hover:scale-105" />
         )}
-      
+      </div>
       </div>
       )}
        </div>
