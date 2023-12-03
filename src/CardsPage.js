@@ -175,7 +175,7 @@ function CardsPage() {
       {isLoading ? (
       <>
       <span className="text-2xl font-bold mb-2 ">{loadingText}</span>
-      <img src={loadingGif} alt="Loading..." className=" w-3/6  m-4"/>
+      <img src={loadingGif} alt="Loading..." className=" w-5/12  m-4"/>
        </>
        ) : imageSrc ? (
         //bg-gradient-to-r from-red-50 via-red-100 to-red-200 shadow-2xl rounded-xl p-4 border border-blue-300
