@@ -137,14 +137,14 @@ function CardsPage() {
   ];
 
   return (
-    <div className="h-screen" style={{ backgroundColor: '#f0f4f8' }}>
+    <div className="  " style={{ backgroundColor: '#f0f4f8' }}>
       <div className="float-left m-4">
         <h2 className="text-2xl font-bold mb-8">花 5 秒鐘讓我們更了解你</h2>
         {questions.map((q, qIndex) => (
           <div key={qIndex} className=" mb-10">
             <span className="font-semibold">{q.question}</span>
             {q.options.map((option, oIndex) => (
-              <label key={oIndex} className="inline-flex items-center ml-2">
+              <label key={oIndex} className="inline-flex items-center ml-2 resposive-question">
                  <input 
                   type="radio" 
                   name={`question-${qIndex}`} 
@@ -166,7 +166,7 @@ function CardsPage() {
       </button>  
       {isModalOpen && (
         <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <p className=' text-red-600 font-semibold text-lg'>{modalContent}</p>
+          <p className=' text-red-600 font-semibold text-lg responsive-text4'>{modalContent}</p>
         </Modal>
       )} 
       </div>

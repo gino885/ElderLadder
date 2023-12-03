@@ -57,6 +57,10 @@
   font-size: 1.875rem;
   line-height: 2.25rem; /* 或您选择的默认大小 */
 }
+.responsive-text4{
+  font-size: 1.5rem;
+  line-height: 1.5rem; /* 或您选择的默认大小 */
+}
 .responsive-invisivle{
   width: 15rem;
   height: 2rem;
@@ -74,7 +78,41 @@
   line-height: 2rem; /* 或您选择的默认大小 */
 }
 
+@media (max-width: 400px){
+  .responsive-text  {
+    font-size: 1.75rem;
+    line-height: 2rem; 
+  }
+  .responsive-invisivle{
+    width: 15rem;
+    height: 2rem;
+  }
+  .resposive-question{
+    display: block;
+    margin-bottom: 10px; 
+  }
+ 
+  .responsive-formText {
+    font-size: 1.3rem;
+    line-height: 2rem; /* 或您选择的默认大小 */
+  }
+  .responsive-text2{
+    font-size: 1.5rem;
+    line-height: 1.85rem;
+     /* 或您选择的默认大小 */
+  }
+  .responsive-text4{
+    font-size: 0.9rem;
+    line-height: 1.5rem; /* 或您选择的默认大小 */
+  }
+ 
+  /* 显示文字 */
 
+  /* 如果需要对 grid 布局做调整 */
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 @media (max-width: 1032px) {
 
@@ -104,17 +142,21 @@
 }
 
 /* 当屏幕宽度小于或等于 600px 时 */
-@media (max-width: 600px) {
+@media  (min-width: 401px) and (max-width: 600px) {
   .responsive-invisivle{
     width: 15rem;
     height: 2rem;
   }
-  /* 隐藏图片 */
-  
-  .responsive-text {
-    font-size: 2rem;
-    line-height: 2rem; /* 或您选择的默认大小 */
+  .resposive-question{
+    display: block;
+    margin-bottom: 10px; 
   }
+  /* 隐藏图片 */
+  .responsive-text  {
+    font-size: 1.75rem;
+    line-height: 2rem; 
+  }
+ 
   .responsive-formText {
     font-size: 1.3rem;
     line-height: 2rem; /* 或您选择的默认大小 */
@@ -123,6 +165,10 @@
     font-size: 1.5rem;
     line-height: 1.85rem;
      /* 或您选择的默认大小 */
+  }
+  .responsive-text4{
+    font-size: 1.1rem;
+    line-height: 1.5rem; /* 或您选择的默认大小 */
   }
  
   /* 显示文字 */

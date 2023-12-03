@@ -95,7 +95,7 @@ function Home() {
           <img  src="https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/arrow.png" alt="Arrow" className=" h-3/5 responsive-image" /> {/* Arrow image */}
         </div>
        <div className="group relative m-1 flex flex-col items-center justify-center w-full">
-       <a href={"https://docs.google.com/forms/d/10jcR4gD4YF0sxWiEi2FU-gq_qCGR5oBDtILhHauneX4/edit"} target="_blank" rel="noopener noreferrer">
+       <a href={"https://docs.google.com/forms/d/e/1FAIpQLSdY70zp33-1gquCTwZGRNu_nLG3w19e3VDY-ppunpsZxYeJyQ/viewform"} target="_blank" rel="noopener noreferrer">
       <img src={"https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/images/form.png"} alt="" className="w-60 h-60 object-cover rounded-lg transition duration-300 ease-in-out group-hover:scale-125" />
       </a>
       <div className="flex items-center">
