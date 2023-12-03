@@ -27,7 +27,7 @@ const posts = [
       { text:'3. 勇敢嘗試', bold: "true", size:'22px'},
       { text:'記得小時候，阿嬤是我的超級英雄，無論是做最好吃的點心、帶我上下學，還是給予無微不至的關懷。現在，轉眼間，我們長大了，這段關係走到了下半場，阿嬤的記憶逐漸模糊，甚至有時會認不得眼前站著的那位，是他的孫子，但正是這個時候，超人下崗了，換成青輩的我們要好好陪伴他們，用愛續寫我們的故事，用最純真的心，最耐心的陪伴，證明愛是不會隨著時間流逝而消失的。或許我們不能成為他們的超人，但，或許，他們也不希望我們如此，辛苦撐起幾十年的保護傘正是希望底下愛護的人不需這般辛勞，在他們眼裡，我們不需要頂天立地，只需要好好地陪伴在他們身邊— 陪伴，就是最長情的告白。', bold: "false", size: '20px'}
                 ],
-    video: 'https://www.youtube.com/watch?v=-Wi5va176rk', 
+    video: 'https://www.youtube.com/watch?v=D5vtfSNlTFM', 
   },
   {
     title: '奶奶與我_透過傳承延續兒時記憶 - 盧易駿',
@@ -75,7 +75,7 @@ const posts = [
     { text:'3. 陪伴', bold: "true", size:'22px'},
     { text: '從以前就知道媽媽厲害的縫紉技巧是來自外婆的指導！印象中在國小二年級時，為了完成寒假作業而寄宿在外婆家，讓外婆教我如何縫出縮小版的衣物（a.k.a.代替我做作業），似乎也種下了我對縫紉抱持熱忱和興趣的契機。升上大學後，忙碌讓我不再有時間能夠與外婆見面，曾經很要好的我們，現在卻逐漸只能從媽媽的口中了解他的近況。想到外婆因為老花而放下的縫紉，希望可以傳承他的絕活，也再次拉近彼此的關係。', bold: 'false', size:'20px'}
     ],
-    image: 'path/to/image2.jpg', 
+    video: 'https://www.youtube.com/watch?v=2aPJoeeENlU', 
   },
   {
     title: '說書人的回憶-我與阿公的故事延續 - 查展平',
@@ -86,7 +86,7 @@ const posts = [
     { text:'3. 陪伴', bold: "true", size:'22px'},
     { text: '小時候第一次看到阿公，便有些害怕他嚴肅的長相與不苟言笑的沉默，一直以來我與他交談內容都只有兩句話 : 「阿公好」「阿公再見」，我以為我們的交集大概一輩子就停在這裡了。在阿罵過世以後，兩個人共同度過的痕跡都成為一個人被遺留下來的孤獨，我也從那時起開始經常回去陪伴他，還記得他說 :生活沒什麼變啦我很好，不用一直來。但每次過去的時候他其實都很開心，我們也多了很多貼近的時間，像是中斷已久的故事重新開始連載一般，我開始慢慢了解他的世界，並在不知不覺間成為了世界裡的一部分，感謝這次機會，讓我們的互動能被記錄下來。我不知道甚麼是好的互動模式，也不知道怎麼樣才能拍攝得讓人更能與長輩溝通，我只是把我們的日常記錄下來，讓故事延續下去。', bold: "false", size: '20px'},
     ],
-    image: 'path/to/image2.jpg', 
+    video: 'https://www.youtube.com/watch?v=R74w3yeWalc', 
   },
   {
     title: '上次和長輩深度談話是什麼時候？ - 金維珊',
@@ -154,7 +154,7 @@ useEffect(() => {
     style={{ textShadow: '4px 4px 4px rgba(0, 0, 1, 0.5)' }}>
     Posts
     </h2>
-     <a href="https://docs.google.com/forms/d/e/1FAIpQLSekCkEwOXJt32iBUyAYhmC3Rg__daP1vZS99_9vMaHjrxXRvw/viewform?pli=1" target="_blank" rel="noopener noreferrer">
+     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdY70zp33-1gquCTwZGRNu_nLG3w19e3VDY-ppunpsZxYeJyQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
     <img src={googleForm} alt="More" className=" ml-10 mr-20 w-20 h-25 hover:scale-110 hover:bg-purple-500 hover:shadow-lg transition transform duration-300 ease-in-out"/>
     <p className=" responsive-formText ml-8 mt-3  font-bold text-slate-900  text-shadow">後測問卷 </p>
      </a>

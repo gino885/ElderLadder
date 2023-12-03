@@ -60,7 +60,7 @@ function Home() {
       <p className=" responsive-text mt-8 text-4xl  text-white custom-font font-semibold">elderLadder 使用四步驟</p>
       </div>
       <div className='flex justify-center '>
-      <p className="responsive-text2 mt-8 text-3xl text-white custom-font font-semibold">親近家中長者 領取免費辛巴克</p>
+      <p className="responsive-text2 mt-8 text-3xl text-white custom-font font-semibold">親近家中長者 領取免費星巴克</p>
       </div>
 
       <div className="grid homeGrid justify-items-center mt-3">
