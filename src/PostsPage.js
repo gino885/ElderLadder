@@ -64,7 +64,7 @@ const posts = [
               'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/10.png',
               'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/11.png',
               'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/12.png',
-              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/13.png'],
+              'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-3/14.png'],
   },
   {
     title: '一針一線拉近與外婆的關係 - 鄭羽伶',
@@ -97,8 +97,23 @@ const posts = [
     { text:'3. 多問對方想法，多讓對方說話', bold: "true", size:'22px'},
     { text:'4. 溝通目的是理解，不是找標準答案', bold: "true", size:'22px'},
     {text: '我和媽媽、媽媽和外婆的關係皆屬於非常親密，不只是過年過節相聚，儘管平時不住一起，也有時常保持聯繫的習慣。然而時常因生活中大小瑣事而忽略了深度價值觀交流的時刻，藉由本次機會和媽媽聊聊「價值觀」、「習慣」相關的話題，實為難得。從這次的訪談，發現原本以為是「禁忌話題」的事，其實在氣氛好、心平氣和、抱有好奇心的心態下談心，都是有機會讓雙方「互相理解」的。本次經驗亦使我體認，世代間因為大環境的改變有思想上的差異是理所當然的，有如祖父母輩和父母也有差別，日後我們與後代也有差別（想像要和出生於有 Chat GPT 的後代共處），所以時常「溝通」是必須的，目的不見得是消弭差距，更為重要的是因理解而更能好好維護親子、青銀關係。', bold: "false", size: '20px'},
-  ],
-    image: 'path/to/image2.jpg', 
+    ],
+    images: ['https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/1.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/2.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/3.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/4.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/5.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/6.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/7.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/8.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/9.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/10.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/11.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/12.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/13.png',
+    'https://elasticbeanstalk-ap-southeast-2-617849466687.s3.ap-southeast-2.amazonaws.com/5-6/14.png'],
+  
+    
   },
 ];
 

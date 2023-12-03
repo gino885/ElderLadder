@@ -53,11 +53,11 @@ function Home() {
         }}
       >
         <div className="h-full bg-black bg-opacity-50 flex items-center justify-center hover:bg-opacity-30 transition duration-600">
-        <h1 className="text-white text-4xl font-bold custom-font shadow-lg h-full">elderLadder.live</h1>
+        <h1 className="text-white text-4xl font-bold custom-font shadow-lg h-full">ElderLadder.live</h1>
         </div>
       </div>
       <div className='flex justify-center'>
-      <p className=" responsive-text mt-8 text-4xl  text-white custom-font font-semibold">elderLadder 使用四步驟</p>
+      <p className=" responsive-text mt-8 text-4xl  text-white custom-font font-semibold">ElderLadder 使用四步驟</p>
       </div>
       <div className='flex justify-center '>
       <p className="responsive-text2 mt-8 text-3xl text-white custom-font font-semibold">親近家中長者 領取免費星巴克</p>
