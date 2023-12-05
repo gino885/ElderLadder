@@ -22,9 +22,9 @@ const posts = [
     title: '青銀下半場 — 陪伴是最長情的告白 - 陳柏駿',
     description:  [
       { text:'與長輩對話的天龍三步：', bold: "true", size:'25px'},
-      { text:'1. 展現積極的學習態度', bold: "true", size:'22px'},
-      { text:'2. 勇於發問', bold: "true", size:'22px'},
-      { text:'3. 勇敢嘗試', bold: "true", size:'22px'},
+      { text:'1. 聆聽', bold: "true", size:'22px'},
+      { text:'2. 正向回饋', bold: "true", size:'22px'},
+      { text:'3. 討論回憶與生活', bold: "true", size:'22px'},
       { text:'記得小時候，阿嬤是我的超級英雄，無論是做最好吃的點心、帶我上下學，還是給予無微不至的關懷。現在，轉眼間，我們長大了，這段關係走到了下半場，阿嬤的記憶逐漸模糊，甚至有時會認不得眼前站著的那位，是他的孫子，但正是這個時候，超人下崗了，換成青輩的我們要好好陪伴他們，用愛續寫我們的故事，用最純真的心，最耐心的陪伴，證明愛是不會隨著時間流逝而消失的。或許我們不能成為他們的超人，但，或許，他們也不希望我們如此，辛苦撐起幾十年的保護傘正是希望底下愛護的人不需這般辛勞，在他們眼裡，我們不需要頂天立地，只需要好好地陪伴在他們身邊— 陪伴，就是最長情的告白。', bold: "false", size: '20px'}
                 ],
     video: 'https://www.youtube.com/watch?v=D5vtfSNlTFM', 
@@ -70,9 +70,9 @@ const posts = [
     title: '一針一線拉近與外婆的關係 - 鄭羽伶',
     description: [ 
     { text:'三步讓你再靠近一點點：', bold: "true", size:'25px'},
-    { text:'1. 聆聽', bold: "true", size:'22px'},
-    { text:'2. 正向回饋', bold: "true", size:'22px'},
-    { text:'3. 陪伴', bold: "true", size:'22px'},
+    { text:'1. 給予回饋和肯定', bold: "true", size:'22px'},
+    { text:'2. 專心聆聽', bold: "true", size:'22px'},
+    { text:'3. 眼神支持', bold: "true", size:'22px'},
     { text: '從以前就知道媽媽厲害的縫紉技巧是來自外婆的指導！印象中在國小二年級時，為了完成寒假作業而寄宿在外婆家，讓外婆教我如何縫出縮小版的衣物（a.k.a.代替我做作業），似乎也種下了我對縫紉抱持熱忱和興趣的契機。升上大學後，忙碌讓我不再有時間能夠與外婆見面，曾經很要好的我們，現在卻逐漸只能從媽媽的口中了解他的近況。想到外婆因為老花而放下的縫紉，希望可以傳承他的絕活，也再次拉近彼此的關係。', bold: 'false', size:'20px'}
     ],
     video: 'https://www.youtube.com/watch?v=2aPJoeeENlU', 
