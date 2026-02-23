@@ -108,57 +108,75 @@ npm: Comes bundled with Node.js
 
 Clone the repository:
 
-Bash
+```Bash
 git clone <your-repo-url>
 Navigate to the project directory:
+```
 
-Bash
+```Bash
 cd ElderLadder
 Install dependencies:
-
-Bash
+```
+```Bash
 npm install
+```
 🔆 Usage
 
 Start the local development server:
 
-Bash
+```Bash
 npm start
 The app will be available at http://localhost:3000.
-
+```
 🌠 Testing
 
 Run the test suite in watch mode:
 
-Bash
+```Bash
 npm test
-🧩 Scripts
-Script	Description
-npm start	Runs the app in development mode.
-npm run build	Builds the app for production to the build folder.
-npm test	Launches the test runner.
-npm run eject	Note: This is a one-way operation. Only use if you need to customize CRA build tools.
-🔧 Configuration
-Environment Variables
+```
+### ⚡ Scripts
 
-If connecting to a backend, create a .env file in the root directory:
+Use the following commands to manage the development lifecycle:
 
-Code snippet
+| Command | Description |
+| :--- | :--- |
+| `npm start` | Runs the app in development mode. |
+| `npm run build` | Builds the app for production to the `build` folder. |
+| `npm test` | Launches the test runner. |
+| `npm run eject` | **Note:** This is a one-way operation for customizing build tools. |
+
+---
+
+### 🔧 Configuration
+
+#### Environment Variables
+If connecting to a backend, create a `.env` file in the root directory:
+
+**`.env`**
+```env
+REACT_APP_API_BASE_URL=http://localhost:8080
+```
+
+```Code snippet
 REACT_APP_API_BASE_URL=http://localhost:8080
 In your code, access it via:
+```
+#### Accessing Variables
 
-JavaScript
+In your code, access it via:
+
+**JavaScript**
+```javascript
 const baseURL = process.env.REACT_APP_API_BASE_URL;
-Note: Create React App (CRA) only exposes variables prefixed with REACT_APP_.
+```
+## 🌻 Completed Features
 
-🌻 Roadmap
-[ ] Improve API integration patterns (centralized Axios client, error handling).
-
-[ ] Add better loading/error UI states across all pages.
-
-[ ] Expand test coverage (page-level interaction and snapshot tests).
-
-[ ] Deployment setup (Netlify/Vercel) and CI/CD pipeline.
+- [x] **Cross-Generational Connection Engine:** Built a platform dedicated to fostering meaningful engagement between young and older adults through curated content.
+- [x] **Interactive Task Cards:** Developed a survey-based system (gender/difficulty) that dynamically fetches and displays actionable interaction prompts.
+- [x] **Story Carousel & Browsing:** Implemented a smooth, card-style UI for browsing community posts and elder stories.
+- [x] **Responsive SPA Architecture:** Engineered a Single Page Application using **React** and **React Router** for seamless client-side navigation.
+- [x] **Modern UI/UX Design:** Integrated **Tailwind CSS** for a responsive layout and `animations.css` for fluid visual transitions.
 
 🤝 Contributing
 Fork the repository.
